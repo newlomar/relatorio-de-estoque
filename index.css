@@ -10,25 +10,32 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: black;
 }
 
 label {
     display: flex;
     flex-direction: column;
+    color: white;
+    font-size: 1.2em;
 }
 
 input {
     width: 10em;
 }
 
-
 button {
-    justify-self: center;
+    color: whitesmoke;
+    font-size: 1em;
+    background-color: gray;
+    border-color: gray;
+    border-radius: 0.2em;
 }
+
 .credenciais {
     display: flex;
     flex-direction: column;
-    padding: 2em;
-    border: 1px solid black;
+    padding: 4em;
+    border: 1px solid white;
     gap: 0.5em;
 }
