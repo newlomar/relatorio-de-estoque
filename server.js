@@ -8,8 +8,11 @@ const port = 3000;
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-type', 'text/html');
-    fs.createReadStream('relatorio-psiu.html').pipe(res);
+    res.end('Hello world');
 
+
+    const method = req.method;
+    console.log(method);
 });
 
 server.listen(port, hostname, () => {
