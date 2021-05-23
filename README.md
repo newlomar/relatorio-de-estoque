@@ -9,8 +9,10 @@ O objetivo dessa aplicação é ter 2 tipos de acesso, 1 para o responsável por
 
 Frontend: HTML / CSS / Javascript
 
-Backend: Node
+Backend: Node(Express)
 
-Banco de dados: em decisão
+Banco de dados: PostgreSQL
 
-Essa aplicação utiliza das tecnologias mais puras que eu pude encontrar para fazê-la. Para o frontend, será HTML, CSS e Javascript e node para o backend. Não há nenhuma pretensão de utilização de framework uma vez que, por mais que seja uma aplicação que terá utilização de uma empresa, o maior objetivo dela é o aprendizado dos conceitos mais básicos do desenvolvimento web.
+Essa aplicação utiliza das tecnologias mais puras que eu pude encontrar para fazê-la. Para o frontend, será HTML, CSS e Javascript e node para o backend, com express. 
+
+O maior objetivo dessa aplicação é o aprendizado dos conceitos mais básicos do desenvolvimento web, mas ela será utilizada no dia a dia de uma lanchonete.
