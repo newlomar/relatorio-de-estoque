@@ -1,0 +1,84 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(171, 183, 183, 1);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+}
+h1 {
+    margin-left: 1em;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1em;
+}
+
+label {
+    padding: 1em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+label:first-child {
+    border-top-left-radius: 1em;
+}
+
+label:last-child {
+    border-bottom-right-radius: 1em;
+}
+
+label:nth-child(odd) {
+    background: lightsteelblue;
+}
+
+label:nth-child(even) {
+    background: lightgray;
+}
+
+
+input {
+    background: white;
+    border-style: none;
+    border-radius: 1em;
+    text-align: center;
+    width: 50%;
+    margin-left: 1em;
+}
+
+button {
+    margin-top: 1em;
+    border-style: none;
+    border-radius: 2em;
+    padding: 0.5em 2em;
+    background: rgba(36, 37, 42, 1);
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 1em;
+}
