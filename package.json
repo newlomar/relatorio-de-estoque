@@ -1,0 +1,24 @@
+{
+  "name": "relatorio-de-estoque",
+  "version": "1.0.0",
+  "description": "Aplicação para criar, acessar, editar e deletar relatório de estoques.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newlomar/relatorio-de-estoque.git"
+  },
+  "keywords": [
+    "relatorio",
+    "estoque",
+    "iniciante"
+  ],
+  "author": "Newton Lomar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/newlomar/relatorio-de-estoque/issues"
+  },
+  "homepage": "https://github.com/newlomar/relatorio-de-estoque#readme"
+}
