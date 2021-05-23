@@ -16,3 +16,17 @@ Banco de dados: PostgreSQL
 Essa aplicação utiliza das tecnologias mais puras que eu pude encontrar para fazê-la. Para o frontend, será HTML, CSS e Javascript e node para o backend, com express. 
 
 O maior objetivo dessa aplicação é o aprendizado dos conceitos mais básicos do desenvolvimento web, mas ela será utilizada no dia a dia de uma lanchonete.
+
+# Como utilizar e testar essa aplicação:
+
+Para utilizar ou testar a aplicação você precisa ter o node.js instalado. A versão utilizada é a: v14.16.1 
+
+No diretório principal, onde está o arquivo index.js e o arquivo package.json utilize o comando: "npm init" para instalar as dependências.
+
+Após isso, no mesmo diretório, inicie o servidor com o comando "node index.js".
+
+Em seguida, acesse o seu localhost na porta 3000 e escolha dentre as 2 formas de visualização: Estoque ou Compras.
+
+Para estoque, utilize a credencial: login: estoque, senha: 123 
+    
+Para compras, utilize a credencial: login: comprador, senha: 321
