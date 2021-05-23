@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/newlomar/relatorio-de-estoque/issues"
   },
-  "homepage": "https://github.com/newlomar/relatorio-de-estoque#readme"
+  "homepage": "https://github.com/newlomar/relatorio-de-estoque#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
