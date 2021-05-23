@@ -5,14 +5,12 @@ botao_logar.addEventListener('click', () => {
     let login = document.getElementById('login').value;
     let senha = document.getElementById('senha').value;
 
-    console.log(login, senha);
-
     if(login === 'estoque' && senha === '123') {
-        return window.open('psiu_estoque.html');
+        return window.location = 'psiu_estoque.html';
     }
     
     else if(login === 'comprador' && senha === '321') {
-        return window.open('psiu_comprador.html');
+        return window.location = 'psiu_comprador.html';
     }
     
     else {
