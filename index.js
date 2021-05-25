@@ -17,17 +17,19 @@ app.get('/', (req, res) => {
 app.post('/add', async (req, res) => {
     try {
 
-        const novoProduto = await pool.query(
-            "INSERT INTO produtos_base (nome, quantidade) VALUES ($1, $2) RETURNING *",
-            ['Exemplo', 1]
-        );
-
+        for(produto in req.body) {
+        
+            let novoProduto = await pool.query(
+                'INSERT INTO produtos_base (nome, quantidade) VALUES ($1, $2)',
+                [produto, Number(req.body[produto])]
+            );
+        }
         // for(produto in req.body) {
 
         //     // let novoProduto = await pool.query(`INSERT INTO produtos_base (nome, quantidade) VALUES (${produto}, ${ Number(req.body[produto])})`);
             
         // }
-        res.json(novoProduto);
+        res.json('foi');
     } catch(error) {
         console.error(error);
         res.send(error);
