@@ -15,10 +15,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/add', async (req, res) => {
-    let mudar1;
-    let mudar2;
     try {
-        const novoProduto = await pool.query(`INSERT INTO produtos_base (nome, quantidade) VALUES (${mudar1} ${mudar2})`);
+        console.log(req.body);
     } catch(error) {
         console.error(error);
     }
