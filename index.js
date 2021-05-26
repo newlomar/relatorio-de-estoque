@@ -14,6 +14,19 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public', 'index.html'));
 });
 
+app.get('/teste', async (req, res) => {
+    try {
+        
+        const todosRelatorios = await pool.query(
+            'SELECT * FROM produtos_base'
+        );
+
+        res.json(todosRelatorios);
+    } catch(error) {
+        res.send(error);
+    }
+});
+
 app.post('/add', async (req, res) => {
     try {
 
@@ -24,11 +37,6 @@ app.post('/add', async (req, res) => {
                 [produto, Number(req.body[produto])]
             );
         }
-        // for(produto in req.body) {
-
-        //     // let novoProduto = await pool.query(`INSERT INTO produtos_base (nome, quantidade) VALUES (${produto}, ${ Number(req.body[produto])})`);
-            
-        // }
         res.json('foi');
     } catch(error) {
         console.error(error);
