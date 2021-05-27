@@ -18,10 +18,10 @@ app.get('/teste', async (req, res) => {
     try {
         
         const todosRelatorios = await pool.query(
-            'SELECT * FROM produtos_base'
+            "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name"
         );
 
-        res.json(todosRelatorios);
+        res.json(todosRelatorios.rows);
     } catch(error) {
         res.send(error);
     }
