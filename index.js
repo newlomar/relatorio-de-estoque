@@ -30,11 +30,18 @@ app.get('/teste', async (req, res) => {
 app.post('/add', async (req, res) => {
     try {
 
+        let exemplo = 'exemplo3';
+
+        let novaTabela = await pool.query(
+            'CREATE TABLE $1::text (id SERIAL PRIMARY KEY, nome VARCHAR(255), quantidade SMALLINT)',
+            [exemplo]
+            );
+
         for(produto in req.body) {
         
             let novoProduto = await pool.query(
-                'INSERT INTO produtos_base (nome, quantidade) VALUES ($1, $2)',
-                [produto, Number(req.body[produto])]
+                'INSERT INTO $1 (nome, quantidade) VALUES ($2, $3)',
+                [exemplo, produto, Number(req.body[produto])]
             );
         }
         res.json('foi');
