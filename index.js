@@ -18,7 +18,7 @@ app.get('/teste', async (req, res) => {
     try {
         
         const todosRelatorios = await pool.query(
-            "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name"
+            "SELECT * from produtos_teste;"
         );
 
         res.json(todosRelatorios.rows);
@@ -30,18 +30,13 @@ app.get('/teste', async (req, res) => {
 app.post('/add', async (req, res) => {
     try {
 
-        let exemplo = 'exemplo3';
-
-        let novaTabela = await pool.query(
-            'CREATE TABLE $1::text (id SERIAL PRIMARY KEY, nome VARCHAR(255), quantidade SMALLINT)',
-            [exemplo]
-            );
+        const data = new Date();
 
         for(produto in req.body) {
         
             let novoProduto = await pool.query(
-                'INSERT INTO $1 (nome, quantidade) VALUES ($2, $3)',
-                [exemplo, produto, Number(req.body[produto])]
+                'INSERT INTO produtos_teste (nome, quantidade, dataRelatorio) VALUES ($1, $2, $3)',
+                [produto, Number(req.body[produto]), data.toLocaleString()]
             );
         }
         res.json('foi');
