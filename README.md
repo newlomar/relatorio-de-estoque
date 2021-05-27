@@ -23,7 +23,7 @@ Para utilizar ou testar a aplicação você precisa ter o node.js instalado. A v
 
 No diretório principal, onde está o arquivo index.js e o arquivo package.json utilize o comando: "npm init" para instalar as dependências.
 
-Após isso, no mesmo diretório, inicie o servidor com o comando "node index.js".
+Após isso, no mesmo diretório, inicie o servidor com o comando "node index.js". É possível utilizar também o comando "npm start". Este está configura para usar uma biblioteca chamada "nodemon" que observa mudança no arquivo do servidor e atualiza sempre que salvarmos uma modificação.
 
 Em seguida, acesse o seu localhost na porta 3000 e escolha dentre as 2 formas de visualização: Estoque ou Compras.
 
