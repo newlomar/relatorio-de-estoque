@@ -21,14 +21,7 @@ app.get('/teste', async (req, res) => {
             "SELECT * from produtos_teste;"
         );
 
-        const dataProdutos = [];
-        console.log('ok');
-        for(produto of todosRelatorios.rows) {
-            console.log('ok');
-            dataProdutos.push(produto.datarelatorio);
-        }
-
-        res.json(dataProdutos);
+        res.json(todosRelatorios.rows);
     } catch(error) {
         res.send(error);
     }
@@ -38,8 +31,6 @@ app.post('/add', async (req, res) => {
     try {
 
         const data = new Date();
-
-        // const dataUTC = new Date(data.valueOf() - data.getTimezoneOffset() * 60000);
 
         for(let produto in req.body) {
         
