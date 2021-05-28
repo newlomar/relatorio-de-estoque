@@ -21,7 +21,14 @@ app.get('/teste', async (req, res) => {
             "SELECT * from produtos_teste;"
         );
 
-        res.json(todosRelatorios.rows);
+        const dataProdutos = [];
+        console.log('ok');
+        for(produto of todosRelatorios.rows) {
+            console.log('ok');
+            dataProdutos.push(produto.datarelatorio);
+        }
+
+        res.json(dataProdutos);
     } catch(error) {
         res.send(error);
     }
@@ -32,11 +39,13 @@ app.post('/add', async (req, res) => {
 
         const data = new Date();
 
-        for(produto in req.body) {
+        // const dataUTC = new Date(data.valueOf() - data.getTimezoneOffset() * 60000);
+
+        for(let produto in req.body) {
         
             let novoProduto = await pool.query(
                 'INSERT INTO produtos_teste (nome, quantidade, dataRelatorio) VALUES ($1, $2, $3)',
-                [produto, Number(req.body[produto]), data.toLocaleString()]
+                [produto, Number(req.body[produto]), data.toISOString()]
             );
         }
         res.json('foi');
