@@ -21,5 +21,16 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
             }
         }
     }
-    console.log(relatorios);
+
+    //relatorios[relatorio];
+    for(let relatorio in relatorios) {
+        let body = document.getElementsByTagName('body');
+        let divRelatorio = document.createElement('div');
+        let tituloRelatorio = document.createElement('h2');
+        tituloRelatorio.textContent = relatorio;
+        divRelatorio.appendChild(tituloRelatorio);
+        body[0].appendChild(divRelatorio);
+    }
+    
+    console.log('end');
 });
