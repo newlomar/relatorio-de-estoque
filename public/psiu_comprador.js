@@ -24,15 +24,24 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
 
     //relatorios[relatorio];
     for(let relatorio in relatorios) {
-        let relatorios = document.getElementById('relatorios');
+        let divRelatorios = document.getElementById('divRelatorios');
         let divRelatorio = document.createElement('div');
         let tituloRelatorio = document.createElement('h2');
         let dataUTC = new Date(relatorio);
         let dataUsuario = new Date(dataUTC.valueOf() - dataUTC.getTimezoneOffset() * 60000);
+        
         tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
         divRelatorio.appendChild(tituloRelatorio);
-        relatorios.appendChild(divRelatorio);
+        divRelatorios.appendChild(divRelatorio);
+        let ul = document.createElement('ul');
+        for(let item of relatorios[relatorio]) {
+            let li = document.createElement('li');
+            let label = document.createElement('label');
+            let input = document.createElement('input');
+            
+            input.setAttribute('type', 'checkbox');
+            input.required = true;
+        }
     }
-    
     console.log('end');
 });
