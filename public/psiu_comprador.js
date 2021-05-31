@@ -24,12 +24,14 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
 
     //relatorios[relatorio];
     for(let relatorio in relatorios) {
-        let body = document.getElementsByTagName('body');
+        let relatorios = document.getElementById('relatorios');
         let divRelatorio = document.createElement('div');
         let tituloRelatorio = document.createElement('h2');
-        tituloRelatorio.textContent = relatorio;
+        let dataUTC = new Date(relatorio);
+        let dataUsuario = new Date(dataUTC.valueOf() - dataUTC.getTimezoneOffset() * 60000);
+        tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
         divRelatorio.appendChild(tituloRelatorio);
-        body[0].appendChild(divRelatorio);
+        relatorios.appendChild(divRelatorio);
     }
     
     console.log('end');
