@@ -29,11 +29,8 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
         let tituloRelatorio = document.createElement('h2');
         let dataUTC = new Date(relatorio);
         let dataUsuario = new Date(dataUTC.valueOf() - dataUTC.getTimezoneOffset() * 60000);
-        
-        tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
-        divRelatorio.appendChild(tituloRelatorio);
-        divRelatorios.appendChild(divRelatorio);
         let ul = document.createElement('ul');
+
         for(let item of relatorios[relatorio]) {
             let li = document.createElement('li');
             let label = document.createElement('label');
@@ -41,7 +38,16 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
             
             input.setAttribute('type', 'checkbox');
             input.required = true;
+            label.textContent = `${item.nome} - ${item.quantidade}`;
+            label.appendChild(input);
+            li.appendChild(label);
+            ul.appendChild(li);
         }
+        
+        tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
+        divRelatorio.appendChild(tituloRelatorio);
+        divRelatorio.appendChild(ul);
+        divRelatorios.appendChild(divRelatorio);
     }
     console.log('end');
 });
