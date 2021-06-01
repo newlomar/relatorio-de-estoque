@@ -26,6 +26,6 @@ h1 {
     color: white;
 }
 
-/* #divRelatorios {
-    background: red;
-} */
+#divRelatorios ul li {
+    list-style: none;
+}

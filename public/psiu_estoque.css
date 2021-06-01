@@ -43,6 +43,7 @@ label {
     padding: 1em;
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
+    width: 19.7em;
 }
 
 label:first-child {
