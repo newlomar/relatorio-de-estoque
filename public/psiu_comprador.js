@@ -35,10 +35,12 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
             let li = document.createElement('li');
             let label = document.createElement('label');
             let input = document.createElement('input');
-            
+            let span = document.createElement('span');
+
             input.setAttribute('type', 'checkbox');
             input.required = true;
-            label.textContent = `${item.nome} - ${item.quantidade}`;
+            span.textContent = `${item.nome} - ${item.quantidade}`;
+            label.appendChild(span);
             label.appendChild(input);
             li.appendChild(label);
             ul.appendChild(li);
