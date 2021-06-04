@@ -26,11 +26,18 @@ h1 {
     color: white;
 }
 
-#divRelatorios .legenda {
+#divRelatorios .divRelatorio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#divRelatorios .divRelatorio .legenda {
+    margin-right: 0.5em;
     display: flex;
 }
 
-#divRelatorios .legenda .prod {
+#divRelatorios .divRelatorio .legenda .prod {
     text-align: center;
     width: 8em;
     border: 1px solid black;
@@ -38,7 +45,7 @@ h1 {
     font-family: 'Quicksand', sans-serif;
 }
 
-#divRelatorios .legenda .quant {
+#divRelatorios .divRelatorio .legenda .quant {
     text-align: center;
     width: 4em;
     border: 1px solid black;
@@ -46,21 +53,21 @@ h1 {
     font-family: 'Quicksand', sans-serif;
 }
 
-#divRelatorios ul {
+#divRelatorios .divRelatorio ul {
     margin-top: 0;
     padding: 0;
 }
 
-#divRelatorios ul li {
+#divRelatorios .divRelatorio ul li {
     list-style: none;
 }
 
-#divRelatorios ul li label {
+#divRelatorios .divRelatorio ul li label {
     display: flex;
     justify-content: flex-start;
 }
 
-#divRelatorios ul li label span{
+#divRelatorios .divRelatorio ul li label span{
     text-align: center;
     width: 8em;
     border: 1px solid black;
@@ -68,14 +75,36 @@ h1 {
     font-family: 'Quicksand', sans-serif;
 }
 
-#divRelatorios ul li label .li_span_quant{
+#divRelatorios .divRelatorio ul li label .li_span_quant{
     width: 4em;
     padding: 1em;
 }
 
-#divRelatorios ul li label input{
-    margin-left: 10em;
-    width: 4em;
-    margin: 0;
-    transform: scale(3);
+#divRelatorios .divRelatorio ul li label input {
+    appearance: none;
+    height: 2.5em;
+    width: 2.5em;
+    background-color: #d5d5d5;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divRelatorios .divRelatorio ul li label input:after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 2em;
+    color: white;
+    display: none;
+}
+
+#divRelatorios .divRelatorio ul li label input:checked{
+    background-color: #5bcd3e;
+}
+
+#divRelatorios .divRelatorio ul li label input:checked:after{
+    display: block;
 }

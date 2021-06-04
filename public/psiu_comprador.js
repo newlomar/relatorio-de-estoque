@@ -63,6 +63,7 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
         quant.className = 'quant';
         tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
         legenda.className = 'legenda';
+        divRelatorio.className = 'divRelatorio';
 
         legenda.appendChild(prod);
         legenda.appendChild(quant);
