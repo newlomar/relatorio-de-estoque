@@ -26,6 +26,21 @@ h1 {
     color: white;
 }
 
+#divRelatorios .legenda {
+    display: flex;
+}
+
+#divRelatorios .legenda span {
+    text-align: center;
+    width: 8em;
+    border: 1px solid black;
+    padding: 0.2em;
+}
+
+#divRelatorios ul {
+    padding: 0;
+}
+
 #divRelatorios ul li {
     list-style: none;
 }
@@ -33,9 +48,11 @@ h1 {
 #divRelatorios ul li label {
     display: flex;
     justify-content: flex-start;
-    margin-top: 1em;
 }
 
 #divRelatorios ul li label span{
-    width: 15em;
+    text-align: center;
+    width: 8em;
+    border: 1px solid black;
+    padding: 1em;
 }

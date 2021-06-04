@@ -30,24 +30,42 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
         let dataUTC = new Date(relatorio);
         let dataUsuario = new Date(dataUTC.valueOf() - dataUTC.getTimezoneOffset() * 60000);
         let ul = document.createElement('ul');
+        let prod = document.createElement('span');
+        let quant = document.createElement('span');
+        let legenda = document.createElement('div');
 
         for(let item of relatorios[relatorio]) {
             let li = document.createElement('li');
             let label = document.createElement('label');
             let input = document.createElement('input');
-            let span = document.createElement('span');
-
+            let span_prod = document.createElement('span');
+            let span_quant = document.createElement('span');
+            
             input.setAttribute('type', 'checkbox');
             input.required = true;
-            span.textContent = `${item.nome} - ${item.quantidade}`;
-            label.appendChild(span);
+            span_prod.textContent = `${item.nome}`;
+            span_quant.textContent = `${item.quantidade}`;
+
+            label.appendChild(span_prod);
+            label.appendChild(span_quant);
             label.appendChild(input);
             li.appendChild(label);
             ul.appendChild(li);
         }
+
         
+
+        prod.textContent = 'Produto';
+        prod.className = 'prod';
+        quant.textContent = 'Quantidade';
+        quant.className = 'quant';
         tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
+        legenda.className = 'legenda';
+
+        legenda.appendChild(prod);
+        legenda.appendChild(quant);
         divRelatorio.appendChild(tituloRelatorio);
+        divRelatorio.appendChild(legenda);
         divRelatorio.appendChild(ul);
         divRelatorios.appendChild(divRelatorio);
     }
