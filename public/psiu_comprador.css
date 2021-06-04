@@ -72,3 +72,10 @@ h1 {
     width: 4em;
     padding: 1em;
 }
+
+#divRelatorios ul li label input{
+    margin-left: 10em;
+    width: 4em;
+    margin: 0;
+    transform: scale(3);
+}
