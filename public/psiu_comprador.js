@@ -45,6 +45,8 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
             input.required = true;
             span_prod.textContent = `${item.nome}`;
             span_quant.textContent = `${item.quantidade}`;
+            span_prod.className = `li_span_prod`;
+            span_quant.className = `li_span_quant`;
 
             label.appendChild(span_prod);
             label.appendChild(span_quant);
@@ -57,7 +59,7 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
 
         prod.textContent = 'Produto';
         prod.className = 'prod';
-        quant.textContent = 'Quantidade';
+        quant.textContent = 'QTD';
         quant.className = 'quant';
         tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
         legenda.className = 'legenda';
