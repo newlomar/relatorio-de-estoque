@@ -40,17 +40,21 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
             let input = document.createElement('input');
             let span_prod = document.createElement('span');
             let span_quant = document.createElement('span');
-            
+            let span_input = document.createElement('span');
+
             input.setAttribute('type', 'checkbox');
             input.required = true;
+    
             span_prod.textContent = `${item.nome}`;
             span_quant.textContent = `${item.quantidade}`;
             span_prod.className = `li_span_prod`;
             span_quant.className = `li_span_quant`;
+            span_input.className = 'li_span_input';
+            span_input.appendChild(input);
 
             label.appendChild(span_prod);
             label.appendChild(span_quant);
-            label.appendChild(input);
+            label.appendChild(span_input);
             li.appendChild(label);
             ul.appendChild(li);
         }

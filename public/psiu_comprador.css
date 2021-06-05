@@ -39,7 +39,7 @@ h1 {
 
 #divRelatorios .divRelatorio .legenda .prod {
     text-align: center;
-    width: 8em;
+    width: 7em;
     border: 1px solid black;
     padding: 1em;
     font-family: 'Quicksand', sans-serif;
@@ -69,16 +69,32 @@ h1 {
 
 #divRelatorios .divRelatorio ul li label span{
     text-align: center;
-    width: 8em;
+    width: 7em;
     border: 1px solid black;
     padding: 1em;
     font-family: 'Quicksand', sans-serif;
 }
 
+#divRelatorios .divRelatorio ul li label .li_span_prod{
+    width: 7em;
+    padding-top: 1.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
 #divRelatorios .divRelatorio ul li label .li_span_quant{
     width: 4em;
-    padding: 1em;
+    padding-top: 1.5em;
+    padding-right: 1em;
+    padding-left: 1em;
 }
+
+#divRelatorios .divRelatorio ul li label .li_span_input{
+    width: 2.5em;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
 
 #divRelatorios .divRelatorio ul li label input {
     appearance: none;
