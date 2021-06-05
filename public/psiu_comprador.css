@@ -30,6 +30,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: white;
+    margin-top: 1em;
 }
 
 #divRelatorios .divRelatorio .legenda {
@@ -125,3 +127,7 @@ h1 {
 #divRelatorios .divRelatorio ul li label input:checked:after{
     display: block;
 }
+
+/* .tabela {
+    display: h;
+} */

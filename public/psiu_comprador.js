@@ -33,6 +33,7 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
         let prod = document.createElement('span');
         let quant = document.createElement('span');
         let legenda = document.createElement('div');
+        let tabela = document.createElement('div');
 
         for(let item of relatorios[relatorio]) {
             let li = document.createElement('li');
@@ -58,22 +59,23 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
             li.appendChild(label);
             ul.appendChild(li);
         }
-
         
 
         prod.textContent = 'Produto';
         prod.className = 'prod';
         quant.textContent = 'QTD';
         quant.className = 'quant';
-        tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
         legenda.className = 'legenda';
+        tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
+        tabela.className = 'tabela';
         divRelatorio.className = 'divRelatorio';
 
         legenda.appendChild(prod);
         legenda.appendChild(quant);
+        tabela.appendChild(legenda);
+        tabela.appendChild(ul);
         divRelatorio.appendChild(tituloRelatorio);
-        divRelatorio.appendChild(legenda);
-        divRelatorio.appendChild(ul);
+        divRelatorio.appendChild(tabela);
         divRelatorios.appendChild(divRelatorio);
     }
     console.log('end');
