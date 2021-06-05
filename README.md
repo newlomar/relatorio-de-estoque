@@ -4,8 +4,6 @@ Aplicação criada para gerar e visualizar relatórios diários de estoque de um
 # Objetivo
 O objetivo dessa aplicação é ter 2 tipos de acesso, 1 para o responsável por gerar o relatório de Estoque e outro para o responsável por visualizar esse relatório e fazer a compra dos produtos.
 
-# OBS: A interface está sendo desenvolvida de modo "Mobile first" uma vez que a aplicação será usada apenas no celular
-
 # Sobre a Stack
 
 Frontend: HTML / CSS / Javascript
@@ -31,3 +29,7 @@ Em seguida, acesse o seu localhost na porta 3000 e escolha dentre as 2 formas de
 Para estoque, utilize a credencial: login: estoque, senha: 123 
     
 Para compras, utilize a credencial: login: comprador, senha: 321
+
+# OBS: 
+
+A interface está sendo desenvolvida de modo "Mobile first" uma vez que a aplicação será usada apenas no celular
