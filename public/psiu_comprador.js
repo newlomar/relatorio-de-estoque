@@ -21,8 +21,7 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
             }
         }
     }
-
-    //relatorios[relatorio];
+    
     for(let relatorio in relatorios) {
         let divRelatorios = document.getElementById('divRelatorios');
         let divRelatorio = document.createElement('div');
