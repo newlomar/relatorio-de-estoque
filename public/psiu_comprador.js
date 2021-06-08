@@ -77,5 +77,6 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
         divRelatorio.appendChild(tabela);
         divRelatorios.appendChild(divRelatorio);
     }
-    console.log('end');
 });
+
+/* USAR TEXT CONTENT COMO ID DE TABELAS PARA FAZER REFERENCIA NO CLICK / DISPLAY NONE */

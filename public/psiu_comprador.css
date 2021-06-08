@@ -127,5 +127,3 @@ h1 {
 #divRelatorios .divRelatorio ul li label input:checked:after{
     display: block;
 }
-
-/* USAR TEXT CONTENT COMO ID DE TABELAS PARA FAZER REFERENCIA NO CLICK / DISPLAY NONE */
