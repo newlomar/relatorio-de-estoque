@@ -1,4 +1,5 @@
 const datasSetadas = [];
+
 const fetchProdutos = fetch('http://localhost:3000/teste')
 .then(response => {
     return response.json();
@@ -59,6 +60,10 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
             ul.appendChild(li);
         }
         
+        tituloRelatorio.addEventListener('click', function() {
+            let relatorio = document.getElementById(tituloRelatorio.textContent);
+            relatorio.classList.toggle('mostrar');
+        });
 
         prod.textContent = 'Produto';
         prod.className = 'prod';
@@ -67,6 +72,7 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
         legenda.className = 'legenda';
         tituloRelatorio.textContent = new Date(dataUsuario).toLocaleString();
         tabela.className = 'tabela';
+        tabela.id = tituloRelatorio.textContent;
         divRelatorio.className = 'divRelatorio';
 
         legenda.appendChild(prod);
@@ -78,5 +84,3 @@ const fetchProdutos = fetch('http://localhost:3000/teste')
         divRelatorios.appendChild(divRelatorio);
     }
 });
-
-/* USAR TEXT CONTENT COMO ID DE TABELAS PARA FAZER REFERENCIA NO CLICK / DISPLAY NONE */

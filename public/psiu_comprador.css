@@ -34,7 +34,11 @@ h1 {
     margin-top: 1em;
 }
 
-#divRelatorios .divRelatorio .legenda {
+#divRelatorios .tabela {
+    display: none;
+}
+
+#divRelatorios .divRelatorio .tabela .legenda {
     width: 20em;
     display: flex;
 }
@@ -125,5 +129,9 @@ h1 {
 }
 
 #divRelatorios .divRelatorio ul li label input:checked:after{
+    display: block;
+}
+
+#diRelatorios #divRelatorios .tabela .mostrar {
     display: block;
 }
