@@ -26,21 +26,39 @@ h1 {
     color: white;
 }
 
+#divRelatorios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #divRelatorios .divRelatorio {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: white;
     margin-top: 1em;
+    width: 90%;
+    border-radius: 1em;
 }
 
-#divRelatorios .tabela {
+#divRelatorios .divRelatorio h2 {
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+}
+
+#divRelatorios .divRelatorio .tabela {
     display: none;
+    width: 100%;
 }
 
 
 #divRelatorios .divRelatorio .mostrar {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #divRelatorios .divRelatorio .tabela .legenda {
@@ -105,6 +123,7 @@ h1 {
     width: 2.5em;
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100%;
+    
 }
 
 
