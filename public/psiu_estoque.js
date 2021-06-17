@@ -69,4 +69,24 @@ const produtos = {
         'Saco Cachorro Quente': 1,
         'Bobina Plástica': 1
     },
+    bebidas: {
+        'Água': 1,
+        'Água c/ Gás': 1,
+        'H20': 1,
+        'Guaraná': 1,
+        'Guaraná Zero': 1,
+        'Coca-cola': 1,
+        'Coca zero': 1,
+        'Água tônica': 1,
+        'Sprite': 1,
+        'Fanta Laranja': 1,
+        'Fanta Uva': 1,
+        'Vinho': 1,
+        'Antártica': 1,
+        'Brahma': 1,
+        'Guaraviton': 1,
+        'Guaravita': 1,
+        'Mate Natural': 1,
+        'Mate Limão': 1
+    },
 };
