@@ -89,4 +89,7 @@ const produtos = {
         'Mate Natural': 1,
         'Mate Limão': 1
     },
+    hortifruti: {
+
+    },
 };
