@@ -90,6 +90,6 @@ const produtos = {
         'Mate Limão': 1
     },
     hortifruti: {
-
+        'Alface': 1,
     },
 };
