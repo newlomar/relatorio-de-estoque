@@ -91,5 +91,5 @@ const produtos = {
     },
     hortifruti: {
         'Alface': 1,
-    },
+    }
 };
