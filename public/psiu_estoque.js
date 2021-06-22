@@ -91,5 +91,47 @@ const produtos = {
     },
     hortifruti: {
         'Alface': 1,
-    }
+        'Tomate': 1,
+        'Pimentão': 1,
+        'Cebola': 1,
+        'Alho Fruta': 1,
+        'Salsa': 1,
+        'Coentro': 1,
+        'Hortelã': 1,
+        'Laranja': 1,
+        'Banana': 1,
+        'Limão': 1,
+        'Gelo': 1,
+        'Água Garrafão': 1,
+        'Abacaxi Fruta': 1
+    },
+    acai: {
+        'Fresk': 1,
+        'Granola': 1,
+        'Paçoca': 1,
+        'Amendoim': 1,
+        'Jujuba': 1,
+        'Flocos Arroz': 1,
+        'Granulado Preto': 1,
+        'Granulado Colorido': 1,
+        'Amendoim Colorido': 1,
+        'Aveia': 1,
+        'Rolinho Wafer': 1,
+        'Calda Caramelo': 1,
+        'Calda Chocolate': 1,
+        'Calda Uva': 1,
+        'Calda Menta': 1,
+        'Calda Leita Condensado': 1
+    },
+    polpa_de_frutas: {
+        'Manga': 1,
+        'Maracujá': 1,
+        'Caju': 1,
+        'Graviola': 1,
+        'Cupuaçu': 1,
+        'Acerola': 1,
+        'Abacaxi': 1,
+        'Abacaxi com Hortelã': 1,
+        'Morango': 1
+    },
 };
